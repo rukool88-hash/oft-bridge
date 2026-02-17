@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0a0b0f;
+    color: #e8eaf0;
+    font-family: var(--font-inter);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+@layer components {
+  /* ─── Card ─────────────────────────────────────────────────────────────── */
+  .card {
+    @apply bg-surface border border-[rgba(255,255,255,0.07)] rounded-2xl overflow-hidden;
+  }
+
+  .card-sm {
+    @apply bg-surface border border-[rgba(255,255,255,0.07)] rounded-xl;
+  }
+
+  .card-surface2 {
+    @apply bg-surface2 border border-[rgba(255,255,255,0.07)] rounded-xl;
+  }
+
+  /* ─── Buttons ──────────────────────────────────────────────────────────── */
+  .btn-primary {
+    @apply w-full py-4 px-6 rounded-2xl font-bold text-base text-white
+           bg-gradient-to-r from-accent to-accent2
+           shadow-glow-accent hover:shadow-glow-accent-lg
+           hover:opacity-90 hover:-translate-y-0.5
+           active:translate-y-0 active:opacity-100
+           disabled:opacity-40 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none
+           transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 rounded-xl font-semibold text-sm text-white
+           bg-surface2 border border-[rgba(255,255,255,0.07)]
+           hover:border-[rgba(99,179,237,0.4)] hover:bg-[rgba(79,156,249,0.05)]
+           transition-all duration-200;
+  }
+
+  .btn-ghost {
+    @apply px-3 py-1.5 rounded-lg text-sm text-[#9ca3af]
+           hover:text-white hover:bg-surface2
+           transition-all duration-200;
+  }
+
+  /* ─── Inputs ───────────────────────────────────────────────────────────── */
+  .input-base {
+    @apply w-full bg-surface2 border border-[rgba(255,255,255,0.07)] rounded-xl
+           px-4 py-3 text-sm text-white placeholder-[#6b7280]
+           focus:outline-none focus:border-accent/50
+           transition-colors duration-200;
+  }
+
+  /* ─── Badge ────────────────────────────────────────────────────────────── */
+  .badge-success {
+    @apply inline-flex items-center px-2 py-0.5 rounded-md text-xs font-semibold
+           bg-success/15 text-success;
+  }
+
+  .badge-warn {
+    @apply inline-flex items-center px-2 py-0.5 rounded-md text-xs font-semibold
+           bg-warn/15 text-warn;
+  }
+
+  .badge-danger {
+    @apply inline-flex items-center px-2 py-0.5 rounded-md text-xs font-semibold
+           bg-danger/15 text-danger;
+  }
+
+  .badge-blue {
+    @apply inline-flex items-center px-2 py-0.5 rounded-md text-xs font-semibold
+           bg-accent/15 text-accent;
+  }
+
+  /* ─── Text ─────────────────────────────────────────────────────────────── */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-accent2;
+  }
+
+  .section-label {
+    @apply text-xs uppercase tracking-widest text-[#6b7280] font-semibold mb-3;
+  }
+}
+
+@layer utilities {
+  /* Ambient background blobs */
+  .bg-ambient {
+    background:
+      radial-gradient(ellipse 70% 50% at 15% 0%, rgba(79, 156, 249, 0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 85% 100%, rgba(124, 111, 247, 0.06) 0%, transparent 60%);
+  }
+
+  /* Glass effect */
+  .glass {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+/* ─── RainbowKit overrides ─────────────────────────────────────────────────── */
+[data-rk] {
+  --rk-colors-accentColor: #4f9cf9 !important;
+  --rk-colors-accentColorForeground: white !important;
+  --rk-colors-connectButtonBackground: #181c25 !important;
+  --rk-colors-connectButtonText: #e8eaf0 !important;
+  --rk-colors-modalBackground: #111318 !important;
+  --rk-colors-modalBorder: rgba(255,255,255,0.07) !important;
+  --rk-colors-menuItemBackground: #181c25 !important;
+  --rk-colors-profileForeground: #181c25 !important;
+  --rk-radii-connectButton: 12px !important;
+  --rk-radii-modal: 20px !important;
+  --rk-radii-menuButton: 12px !important;
+}

@@ -1,0 +1,191 @@
+import type { SupportedChain } from '@/types'
+
+// LayerZero V2 EndpointV2 addresses
+// https://docs.layerzero.network/v2/developers/evm/technical-reference/deployed-contracts
+
+export const SUPPORTED_CHAINS: SupportedChain[] = [
+  {
+    id: 1,
+    eid: 30101,
+    name: 'Ethereum',
+    shortName: 'ETH',
+    logo: '🔷',
+    color: '#627EEA',
+    rpcUrl: 'https://eth.llamarpc.com',
+    blockExplorer: 'https://etherscan.io',
+    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    layerZeroEndpoint: '0x1a44076050125825900e736c501f859c50fE728c',
+  },
+  {
+    id: 42161,
+    eid: 30110,
+    name: 'Arbitrum',
+    shortName: 'ARB',
+    logo: '🟣',
+    color: '#28A0F0',
+    rpcUrl: 'https://arb1.arbitrum.io/rpc',
+    blockExplorer: 'https://arbiscan.io',
+    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    layerZeroEndpoint: '0x1a44076050125825900e736c501f859c50fE728c',
+  },
+  {
+    id: 10,
+    eid: 30111,
+    name: 'Optimism',
+    shortName: 'OP',
+    logo: '🔴',
+    color: '#FF0420',
+    rpcUrl: 'https://mainnet.optimism.io',
+    blockExplorer: 'https://optimistic.etherscan.io',
+    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    layerZeroEndpoint: '0x1a44076050125825900e736c501f859c50fE728c',
+  },
+  {
+    id: 137,
+    eid: 30109,
+    name: 'Polygon',
+    shortName: 'MATIC',
+    logo: '🟪',
+    color: '#8247E5',
+    rpcUrl: 'https://polygon-rpc.com',
+    blockExplorer: 'https://polygonscan.com',
+    nativeCurrency: { name: 'MATIC', symbol: 'MATIC', decimals: 18 },
+    layerZeroEndpoint: '0x1a44076050125825900e736c501f859c50fE728c',
+  },
+  {
+    id: 56,
+    eid: 30102,
+    name: 'BNB Chain',
+    shortName: 'BNB',
+    logo: '🟡',
+    color: '#F3BA2F',
+    rpcUrl: 'https://bsc-dataseed.binance.org',
+    blockExplorer: 'https://bscscan.com',
+    nativeCurrency: { name: 'BNB', symbol: 'BNB', decimals: 18 },
+    layerZeroEndpoint: '0x1a44076050125825900e736c501f859c50fE728c',
+  },
+  {
+    id: 43114,
+    eid: 30106,
+    name: 'Avalanche',
+    shortName: 'AVAX',
+    logo: '🔺',
+    color: '#E84142',
+    rpcUrl: 'https://api.avax.network/ext/bc/C/rpc',
+    blockExplorer: 'https://snowtrace.io',
+    nativeCurrency: { name: 'Avalanche', symbol: 'AVAX', decimals: 18 },
+    layerZeroEndpoint: '0x1a44076050125825900e736c501f859c50fE728c',
+  },
+  {
+    id: 8453,
+    eid: 30184,
+    name: 'Base',
+    shortName: 'BASE',
+    logo: '🔵',
+    color: '#0052FF',
+    rpcUrl: 'https://mainnet.base.org',
+    blockExplorer: 'https://basescan.org',
+    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    layerZeroEndpoint: '0x1a44076050125825900e736c501f859c50fE728c',
+  },
+  {
+    id: 534352,
+    eid: 30214,
+    name: 'Scroll',
+    shortName: 'SCROLL',
+    logo: '📜',
+    color: '#FFDBB1',
+    rpcUrl: 'https://rpc.scroll.io',
+    blockExplorer: 'https://scrollscan.com',
+    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    layerZeroEndpoint: '0x6F475642a6e85809B1c36Fa62763669b1b48DD5B',
+  },
+  {
+    id: 59144,
+    eid: 30183,
+    name: 'Linea',
+    shortName: 'LINEA',
+    logo: '⬡',
+    color: '#61DFFF',
+    rpcUrl: 'https://rpc.linea.build',
+    blockExplorer: 'https://lineascan.build',
+    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    layerZeroEndpoint: '0x1a44076050125825900e736c501f859c50fE728c',
+  },
+  {
+    id: 5000,
+    eid: 30181,
+    name: 'Mantle',
+    shortName: 'MNT',
+    logo: '🏔️',
+    color: '#B5E1D8',
+    rpcUrl: 'https://rpc.mantle.xyz',
+    blockExplorer: 'https://explorer.mantle.xyz',
+    nativeCurrency: { name: 'Mantle', symbol: 'MNT', decimals: 18 },
+    layerZeroEndpoint: '0x1a44076050125825900e736c501f859c50fE728c',
+  },
+  {
+    id: 324,
+    eid: 30165,
+    name: 'zkSync Era',
+    shortName: 'ZK',
+    logo: '⚡',
+    color: '#8C8DFC',
+    rpcUrl: 'https://mainnet.era.zksync.io',
+    blockExplorer: 'https://explorer.zksync.io',
+    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    layerZeroEndpoint: '0xd07C30aF3Ff30D96BDd0DA111CC4d21dEb6dc2c3',
+  },
+  {
+    id: 169,
+    eid: 30217,
+    name: 'Manta Pacific',
+    shortName: 'MANTA',
+    logo: '🌊',
+    color: '#6FDAF5',
+    rpcUrl: 'https://pacific-rpc.manta.network/http',
+    blockExplorer: 'https://pacific-explorer.manta.network',
+    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    layerZeroEndpoint: '0x1a44076050125825900e736c501f859c50fE728c',
+  },
+  {
+    id: 250,
+    eid: 30112,
+    name: 'Fantom',
+    shortName: 'FTM',
+    logo: '👻',
+    color: '#1969FF',
+    rpcUrl: 'https://rpc.ankr.com/fantom',
+    blockExplorer: 'https://ftmscan.com',
+    nativeCurrency: { name: 'Fantom', symbol: 'FTM', decimals: 18 },
+    layerZeroEndpoint: '0x1a44076050125825900e736c501f859c50fE728c',
+  },
+  {
+    id: 1088,
+    eid: 30151,
+    name: 'Metis',
+    shortName: 'METIS',
+    logo: '🌀',
+    color: '#00DACC',
+    rpcUrl: 'https://andromeda.metis.io/?owner=1088',
+    blockExplorer: 'https://andromeda-explorer.metis.io',
+    nativeCurrency: { name: 'Metis', symbol: 'METIS', decimals: 18 },
+    layerZeroEndpoint: '0x1a44076050125825900e736c501f859c50fE728c',
+  },
+]
+
+export const CHAIN_BY_EID = Object.fromEntries(
+  SUPPORTED_CHAINS.map((c) => [c.eid, c])
+) as Record<number, SupportedChain>
+
+export const CHAIN_BY_ID = Object.fromEntries(
+  SUPPORTED_CHAINS.map((c) => [c.id, c])
+) as Record<number, SupportedChain>
+
+export function getChainByEid(eid: number): SupportedChain | undefined {
+  return CHAIN_BY_EID[eid]
+}
+
+export function getChainById(chainId: number): SupportedChain | undefined {
+  return CHAIN_BY_ID[chainId]
+}
