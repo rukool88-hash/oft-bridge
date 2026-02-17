@@ -178,6 +178,19 @@ export const OFT_TOKENS: OFTToken[] = [
       { chainEid: 30102, address: '0x6985884C4392D348587B19cb9eAAf157F13271cd', oftVersion: 'OFT' },
     ],
   },
+  {
+  symbol: 'XGEM',
+  name: 'XGEM',
+  icon: '🔥',
+  description: 'XGEM',
+  coingeckoId: 'XGEM',
+  decimals: 18,
+  tags: ['defi'],
+  deployments: [
+    { chainEid: 30106, address: '0xfa113908f851e6357d8a20e2a18c22113d5755a9', oftVersion: 'OFT' },
+    { chainEid: 30109, address: '0x02649c1ff4296038de4b9ba8f491b42b940a8252', oftVersion: 'OFT' },
+  ],
+}
 ]
 
 export function getTokenBySymbol(symbol: string): OFTToken | undefined {
